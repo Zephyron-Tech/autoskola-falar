@@ -16,7 +16,7 @@ export default function GDPR() {
               href="/"
               className="text-xl sm:text-2xl font-bold text-gray-900 hover:text-skoda-dynamic-blue transition-colors"
             >
-              Autoškola Falář
+              Autoškola Falář & Houdek
             </Link>
             <Link
               href="/"

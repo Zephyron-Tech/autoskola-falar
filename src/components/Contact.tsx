@@ -3,11 +3,14 @@
 import Image from "next/image";
 
 export default function Contact() {
-    const handleCourseClick = (e: React.MouseEvent<HTMLAnchorElement>, course: string) => {
+  const handleCourseClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    course: string
+  ) => {
     e.preventDefault();
-    
+
     // Scroll to contact section
-    const targetElement = document.getElementById('contact');
+    const targetElement = document.getElementById("contact");
     if (targetElement) {
       const navbarHeight = 80;
       const elementPosition = targetElement.offsetTop;
@@ -15,10 +18,10 @@ export default function Contact() {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
-    
+
     // Set the URL hash with course parameter
     window.location.hash = `contact?course=${course}`;
   };
@@ -60,7 +63,9 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">Adresa</p>
+                      <p className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
+                        Adresa
+                      </p>
                       <p className="text-sm sm:text-base text-gray-600">
                         1. máje 194/15, 385 01 Vimperk II
                       </p>
@@ -79,12 +84,14 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900 text-sm sm:text-base">Telefon</p>
+                      <p className="font-semibold text-gray-900 text-sm sm:text-base">
+                        Telefon
+                      </p>
                       <a
                         href="tel:+420606050530"
                         className="text-sm sm:text-base text-skoda-dynamic-blue hover:underline font-medium"
                       >
-                        +420 606 050 530
+                        +420 603 173 049
                       </a>
                     </div>
                   </div>
@@ -101,7 +108,9 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900 text-sm sm:text-base">E-mail</p>
+                      <p className="font-semibold text-gray-900 text-sm sm:text-base">
+                        E-mail
+                      </p>
                       <a
                         href="mailto:info@autoskola-falar.cz"
                         className="text-sm sm:text-base text-skoda-dynamic-blue hover:underline"
@@ -113,6 +122,38 @@ export default function Contact() {
                 </div>
               </div>
 
+              <div className="bg-white rounded-xl p-6 lg:p-8 shadow-sm border border-gray-200">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                  Kde nás najdete
+                </h3>
+
+                {/* Map Container */}
+                <div className="aspect-[4/3] rounded-lg overflow-hidden border border-gray-200">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.8!2d13.77594!3d49.04361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b7c5e8b5c5e8b%3A0x1c5e8b5c5e8b5c5e!2s1.%20m%C3%A1je%20194%2F15%2C%20385%2001%20Vimperk%20II!5e0!3m2!1scs!2scz!4v1693920000000!5m2!1scs!2scz"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Autoškola Falář - 1. máje 194/15, Vimperk"
+                  />
+                </div>
+
+                <div className="mt-4 text-sm text-gray-600 space-y-1">
+                  <div className="flex items-center space-x-2">
+                    <span>Parkování dostupné přímo u budovy</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span>Zastávka MHD: Náměstí (2 min. chůze)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Google Maps */}
+            <div className="space-y-6">
               {/* Opening Hours */}
               <div className="bg-white rounded-xl p-5 sm:p-6 lg:p-8 shadow-sm border border-gray-200">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">
@@ -167,45 +208,12 @@ export default function Contact() {
                   </p>
                 </div>
               </div>
-            </div>
-
-            {/* Google Maps */}
-            <div className="space-y-6">
-              <div className="bg-white rounded-xl p-6 lg:p-8 shadow-sm border border-gray-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                  Kde nás najdete
-                </h3>
-
-                {/* Map Container */}
-                <div className="aspect-[4/3] rounded-lg overflow-hidden border border-gray-200">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.8!2d13.77594!3d49.04361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b7c5e8b5c5e8b%3A0x1c5e8b5c5e8b5c5e!2s1.%20m%C3%A1je%20194%2F15%2C%20385%2001%20Vimperk%20II!5e0!3m2!1scs!2scz!4v1693920000000!5m2!1scs!2scz"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Autoškola Falář - 1. máje 194/15, Vimperk"
-                  />
-                </div>
-
-                <div className="mt-4 text-sm text-gray-600 space-y-1">
-                  <div className="flex items-center space-x-2">
-                    <span>Parkování dostupné přímo u budovy</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <span>Zastávka MHD: Náměstí (2 min. chůze)</span>
-                  </div>
-                </div>
-              </div>
-
               {/* Quick Actions */}
-              <div className="bg-skoda-dynamic-blue text-white rounded-xl p-6 lg:p-8">
+              {/* <div className="bg-skoda-dynamic-blue text-white rounded-xl p-6 lg:p-8">
                 <h3 className="text-xl font-bold mb-4">Potřebujete pomoc?</h3>
                 <div className="space-y-3">
                   <a
-                    href="tel:+420606050530"
+                    href="tel:+420603173049"
                     className="w-full bg-white text-skoda-dynamic-blue font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-300 text-center block"
                   >
                     Zavolat nyní
@@ -218,7 +226,7 @@ export default function Contact() {
                     Napsat e-mail
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -181,8 +181,7 @@ export default function Courses() {
               Máte otázky nebo si chcete rezervovat kurz?
             </p>
             <a
-              href="#contact?course=konzultace"
-              onClick={(e) => handleCourseClick(e, 'konzultace')}
+              href="#contact-info"
               className="bg-gray-900 hover:bg-gray-800 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105"
             >
               Kontaktujte nás

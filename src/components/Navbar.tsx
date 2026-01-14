@@ -22,7 +22,7 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    { href: "#news", label: "Události" },
+    // { href: "#news", label: "Události" },
     { href: "#about", label: "O nás" },
     { href: "#courses", label: "Kurzy" },
     { href: "#gallery", label: "Galerie" },
@@ -69,7 +69,7 @@ export default function Navbar() {
                 <h1
                   className={`text-xl sm:text-2xl font-bold transition-colors duration-300 ${textColor}`}
                 >
-                  Autoškola Falář
+                  Autoškola Falář & Houdek
                 </h1>
               </Link>
             </div>

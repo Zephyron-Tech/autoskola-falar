@@ -1,8 +1,6 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 // Mapping pro kurzy
 const courseLabels: { [key: string]: string } = {
   'skupina-b': 'Skupina B - Osobní auto',
@@ -12,10 +10,20 @@ const courseLabels: { [key: string]: string } = {
 };
 
 export async function POST(request: Request) {
+  // Kontrola, zda je API klíč nastaven
+  if (!process.env.RESEND_API_KEY) {
+    return NextResponse.json(
+      { success: false, error: 'Email service is not configured' },
+      { status: 503 }
+    );
+  }
+
   const { name, email, phone, course, message } = await request.json();
 
   // Převod course ID na lidsky čitelný text
   const courseLabel = courseLabels[course] || course;
+
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
     const data = await resend.emails.send({

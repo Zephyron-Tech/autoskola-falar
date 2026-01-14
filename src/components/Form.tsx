@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { DownloadButton } from "./DownloadButton";
 
 export default function Form() {
   const [formData, setFormData] = useState({
@@ -92,153 +93,47 @@ export default function Form() {
             </h2>
             <div className="w-20 sm:w-24 h-1 bg-skoda-dynamic-blue mx-auto mb-3 sm:mb-4"></div>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-              Zaregistrujte se do našeho kurzu nebo nás kontaktujte s jakýmkoli
-              dotazem.
+              Stáhněte si potřebné dokumenty pro registraci do kurzu.
             </p>
           </div>
 
-          {/* Contact Form */}
-          <div className="bg-gray-50 rounded-xl p-5 sm:p-6 lg:p-8">
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-5 sm:mb-6 text-center">
-              Kontaktní formulář
-            </h3>
-
-            {submitStatus === "success" && (
-              <div className="mb-5 sm:mb-6 p-3 sm:p-4 bg-green-100 border border-green-300 rounded-lg">
-                <p className="text-sm sm:text-base text-green-800 font-semibold">
-                  ✓ Děkujeme! Vaše zpráva byla odeslána.
-                </p>
-                <p className="text-xs sm:text-sm text-green-700 mt-1">
-                  Ozveme se vám co nejdříve.
-                </p>
-              </div>
-            )}
-
-            <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
-              {/* Row 1: Name and Email */}
-              <div className="grid md:grid-cols-2 gap-5 sm:gap-6">
-                {/* Name */}
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
-                  >
-                    Jméno a příjmení *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-skoda-dynamic-blue focus:border-skoda-dynamic-blue transition-colors duration-200 text-gray-700 placeholder:text-gray-500"
-                    placeholder="Zadejte vaše jméno"
-                  />
-                </div>
-
-                {/* Email */}
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
-                  >
-                    E-mail *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-skoda-dynamic-blue focus:border-skoda-dynamic-blue transition-colors duration-200 text-gray-700 placeholder:text-gray-500"
-                    placeholder="vas.email@example.com"
-                  />
-                </div>
-              </div>
-
-              {/* Row 2: Phone and Course */}
-              <div className="grid md:grid-cols-2 gap-6">
-                {/* Phone */}
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
-                  >
-                    Telefon *
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-skoda-dynamic-blue focus:border-skoda-dynamic-blue transition-colors duration-200 text-gray-700 placeholder:text-gray-500"
-                    placeholder="+420 xxx xxx xxx"
-                  />
-                </div>
-
-                {/* Course Selection */}
-                <div>
-                  <label
-                    htmlFor="course"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
-                  >
-                    Zájem o kurz
-                  </label>
-                  <select
-                    id="course"
-                    name="course"
-                    value={formData.course}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-skoda-dynamic-blue focus:border-skoda-dynamic-blue transition-colors duration-200 text-gray-700"
-                  >
-                    <option value="">Vyberte kurz</option>
-                    <option value="skupina-b">
-                      Skupina B - Osobní auto (22 000 Kč)
-                    </option>
-                    <option value="l17">
-                      L17 - Řízení od 17 let (22 000 Kč)
-                    </option>
-                    <option value="konzultace">Jen konzultace</option>
-                  </select>
-                </div>
-              </div>
-
-              {/* Row 3: Message (full width) */}
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-semibold text-gray-700 mb-2"
-                >
-                  Zpráva
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-skoda-dynamic-blue focus:border-skoda-dynamic-blue transition-colors duration-200 resize-vertical text-gray-700 placeholder:text-gray-500"
-                  placeholder="Napište nám vaše dotazy nebo poznámky..."
+          {/* Download Buttons */}
+          <div className="bg-gray-50 rounded-xl p-8 sm:p-10 lg:p-12">
+            <div className="flex flex-col md:flex-row gap-6 justify-center items-stretch">
+              {/* Přihláška do autoškoly */}
+              <div className="flex-1 max-w-md">
+                <DownloadButton
+                  fileUrl="/documents/prihlaska_do_autoskoly.pdf"
+                  fileName="prihlaska_do_autoskoly.pdf"
+                  label="Přihláška do autoškoly"
+                  icon={
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  }
+                  className="w-full"
                 />
               </div>
 
-              {/* Submit Button */}
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-skoda-dynamic-blue hover:bg-blue-hover hover:cursor-pointer disabled:bg-gray-400 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-[1.02] disabled:transform-none disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? "Odesílám..." : "Odeslat formulář"}
-              </button>
+              {/* Lékařský posudek */}
+              <div className="flex-1 max-w-md">
+                <DownloadButton
+                  fileUrl="/documents/lekarsky_posudek.pdf"
+                  fileName="lekarsky_posudek.pdf"
+                  label="Lékařský posudek"
+                  icon={
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  }
+                  className="w-full"
+                />
+              </div>
+            </div>
 
-              <p className="text-xs text-gray-600 text-center">
-                * Povinná pole. Vaše údaje budou zpracovány v souladu s GDPR.
-              </p>
-            </form>
+            <p className="text-sm text-gray-600 text-center mt-8">
+              Po vyplnění dokumentů nás kontaktujte telefonicky nebo e-mailem.
+            </p>
           </div>
         </div>
       </div>

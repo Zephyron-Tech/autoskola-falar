@@ -345,7 +345,7 @@ export default function ObchodniPodminky() {
         <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-6">
           <div className="max-w-6xl mx-auto text-center">
             <p className="text-xs sm:text-sm text-gray-400">
-              © 2025 Autoškola Falář. Všechna práva vyhrazena.
+              © 2026 Autoškola Falář & Houdek. Všechna práva vyhrazena.
             </p>
           </div>
         </div>

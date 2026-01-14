@@ -37,7 +37,7 @@ export default function Footer() {
           {/* Bottom Bar */}
           <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
             <p className="text-xs text-gray-500">
-              © 2025 Autoškola Falář. Všechna práva vyhrazena.
+              © 2026 Autoškola Falář & Houdek. Všechna práva vyhrazena.
             </p>
             <div className="flex items-center gap-2 text-xs text-gray-500">
               <span>Webové stránky vytvořila společnost</span>
