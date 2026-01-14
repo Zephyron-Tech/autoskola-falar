@@ -10,7 +10,7 @@ export default function Footer() {
             {/* Brand */}
             <div className="text-center md:text-left">
               <h3 className="text-lg font-bold text-white mb-1">
-                Autoškola Falář
+                Autoškola Falář & Houdek
               </h3>
               <p className="text-sm text-gray-400">
                 Vimperk • Prachatice • Volary
