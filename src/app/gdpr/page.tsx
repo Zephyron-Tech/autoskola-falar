@@ -3,6 +3,9 @@ import Link from "next/link";
 export const metadata = {
   title: "GDPR - Ochrana osobních údajů | Autoškola Falář",
   description: "Informace o zpracování osobních údajů v Autoškole Falář Vimperk v souladu s GDPR.",
+  alternates: {
+    canonical: '/gdpr',
+  },
 };
 
 export default function GDPR() {

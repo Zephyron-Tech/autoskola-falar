@@ -3,6 +3,9 @@ import Link from "next/link";
 export const metadata = {
   title: "Obchodní podmínky | Autoškola Falář",
   description: "Obchodní podmínky poskytování služeb autoškoly Falář Vimperk.",
+  alternates: {
+    canonical: '/obchodni-podminky',
+  },
 };
 
 export default function ObchodniPodminky() {
