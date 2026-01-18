@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://autoskola-falar.cz'),
+  metadataBase: new URL('https://www.autoskola-falar.cz'),
   title: "Autoškola Vimperk",
   description: "Autoškola Vimperk | Stanislav Falář | Profesionální výuka řízení",
   alternates: {
