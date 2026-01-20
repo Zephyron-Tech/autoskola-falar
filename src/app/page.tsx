@@ -17,7 +17,7 @@ export default function Home() {
       {/* <News /> */}
       <About />
       <Courses />
-      <Gallery />
+      {/* <Gallery /> */}
       <Form />
       <FAQ />
       <Contact />

@@ -25,7 +25,7 @@ export default function Navbar() {
     // { href: "#news", label: "Události" },
     { href: "#about", label: "O nás" },
     { href: "#courses", label: "Kurzy" },
-    { href: "#gallery", label: "Galerie" },
+    // { href: "#gallery", label: "Galerie" },
     { href: "#contact", label: "Přihlásit se" },
     { href: "#faq", label: "FAQ" },
   ];
@@ -105,6 +105,31 @@ export default function Navbar() {
                 </svg> */}
                 <span>Kontakt</span>
               </a>
+
+              {/* Instagram Icon */}
+              <a
+                href="https://www.instagram.com/autoskolahf/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`ml-3 p-2 rounded-full transition-all duration-300 hover:scale-110 ${textColor} ${hoverTextColor} ${hoverBg}`}
+                aria-label="Instagram"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -166,10 +191,9 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
-            {/* Mobile Contact CTA Button */}
-            <a
-              href="#contact-info"
-              className={`mt-4 px-4 py-3 bg-skoda-dynamic-blue hover:bg-blue-hover text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-skoda-dynamic-blue/25 flex items-center space-x-2 cursor-pointer ${
+            {/* Mobile Contact & IG */}
+            <div
+              className={`mt-4 flex items-center gap-3 ${
                 isMenuOpen
                   ? "translate-x-0 opacity-100"
                   : "translate-x-4 opacity-0"
@@ -179,19 +203,49 @@ export default function Navbar() {
                   ? `${navItems.length * 50}ms`
                   : "0ms",
               }}
-              onClick={() => setIsMenuOpen(false)}
             >
-              {/* <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
+              <a
+                href="#contact-info"
+                className="flex-1 px-4 py-3 bg-skoda-dynamic-blue hover:bg-blue-hover text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-skoda-dynamic-blue/25 flex items-center justify-center space-x-2 cursor-pointer"
+                onClick={() => setIsMenuOpen(false)}
               >
-                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.22 11.22 0 003.48.56 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.22 11.22 0 00.56 3.48 1 1 0 01-.27 1.11l-2.2 2.2z" />
-              </svg> */}
-              <span>Kontakt</span>
-            </a>
+                {/* <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.22 11.22 0 003.48.56 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.22 11.22 0 00.56 3.48 1 1 0 01-.27 1.11l-2.2 2.2z" />
+                </svg> */}
+                <span>Kontakt</span>
+              </a>
+
+              <a
+                href="https://www.instagram.com/autoskola_falar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`p-3 rounded-lg border border-white/10 transition-all duration-300 hover:scale-105 ${textColor} ${hoverBg}`}
+                onClick={() => setIsMenuOpen(false)}
+                aria-label="Instagram"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+            </div>
           </div>
         </nav>
       </header>
