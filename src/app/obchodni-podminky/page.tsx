@@ -54,7 +54,7 @@ export default function ObchodniPodminky() {
                   <strong>Poskytovatel služeb:</strong>
                 </p>
                 <p className="text-gray-700 mb-1">Autoškola Falář</p>
-                <p className="text-gray-700 mb-1">1. máje 194/15, 385 01 Vimperk II</p>
+                <p className="text-gray-700 mb-1">1. máje 200, 385 01 Vimperk</p>
                 <p className="text-gray-700 mb-1">
                   Tel:{" "}
                   <a
@@ -348,7 +348,7 @@ export default function ObchodniPodminky() {
         <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-6">
           <div className="max-w-6xl mx-auto text-center">
             <p className="text-xs sm:text-sm text-gray-400">
-              © 2026 Autoškola Falář & Houdek. Všechna práva vyhrazena.
+              © 2026 Autoškola Falář. Všechna práva vyhrazena.
             </p>
           </div>
         </div>

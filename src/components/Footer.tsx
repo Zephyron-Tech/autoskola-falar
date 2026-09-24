@@ -10,7 +10,7 @@ export default function Footer() {
             {/* Brand */}
             <div className="text-center md:text-left">
               <h3 className="text-lg font-bold text-white mb-1">
-                Autoškola Falář & Houdek
+                Autoškola Falář
               </h3>
               <p className="text-sm text-gray-400">
                 Vimperk • Prachatice • Volary
@@ -37,7 +37,7 @@ export default function Footer() {
           {/* Bottom Bar */}
           <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
             <p className="text-xs text-gray-500">
-              © 2026 Autoškola Falář & Houdek. Všechna práva vyhrazena.
+              © 2026 Autoškola Falář. Všechna práva vyhrazena.
             </p>
             <div className="flex items-center gap-2 text-xs text-gray-500">
               <span>Webové stránky vytvořila společnost</span>

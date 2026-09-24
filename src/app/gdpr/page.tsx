@@ -19,7 +19,7 @@ export default function GDPR() {
               href="/"
               className="text-xl sm:text-2xl font-bold text-gray-900 hover:text-skoda-dynamic-blue transition-colors"
             >
-              Autoškola Falář & Houdek
+              Autoškola Falář
             </Link>
             <Link
               href="/"
@@ -62,7 +62,7 @@ export default function GDPR() {
                   <strong>Název:</strong> Autoškola Falář
                 </p>
                 <p className="text-gray-700 mb-2">
-                  <strong>Sídlo:</strong> 1. máje 194/15, 385 01 Vimperk II
+                  <strong>Sídlo:</strong> 1. máje 200, 385 01 Vimperk
                 </p>
                 <p className="text-gray-700 mb-2">
                   <strong>Telefon:</strong>{" "}
@@ -307,7 +307,7 @@ export default function GDPR() {
                 </p>
                 <p className="text-gray-700">
                   <strong>Poštovní adresa:</strong> Autoškola Falář, 1. máje
-                  194/15, 385 01 Vimperk II
+                  200, 385 01 Vimperk
                 </p>
               </div>
             </section>

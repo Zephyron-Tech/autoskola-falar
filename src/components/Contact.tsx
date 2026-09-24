@@ -67,7 +67,7 @@ export default function Contact() {
                         Adresa
                       </p>
                       <p className="text-sm sm:text-base text-gray-600">
-                        1. máje 194/15, 385 01 Vimperk II
+                        1. máje 200, 385 01 Vimperk
                       </p>
                     </div>
                   </div>
@@ -130,14 +130,14 @@ export default function Contact() {
                 {/* Map Container */}
                 <div className="aspect-[4/3] rounded-lg overflow-hidden border border-gray-200">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.8!2d13.77594!3d49.04361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b7c5e8b5c5e8b%3A0x1c5e8b5c5e8b5c5e!2s1.%20m%C3%A1je%20194%2F15%2C%20385%2001%20Vimperk%20II!5e0!3m2!1scs!2scz!4v1693920000000!5m2!1scs!2scz"
+                    src="https://www.google.com/maps?q=1.%20m%C3%A1je%20200%2C%20385%2001%20Vimperk&output=embed"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Autoškola Falář - 1. máje 194/15, Vimperk"
+                    title="Autoškola Falář - 1. máje 200, Vimperk"
                   />
                 </div>
 

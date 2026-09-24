@@ -69,7 +69,7 @@ export default function Navbar() {
                 <h1
                   className={`text-xl sm:text-2xl font-bold transition-colors duration-300 ${textColor}`}
                 >
-                  Autoškola Falář & Houdek
+                  Autoškola Falář
                 </h1>
               </Link>
             </div>
