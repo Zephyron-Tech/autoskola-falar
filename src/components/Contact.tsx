@@ -141,14 +141,6 @@ export default function Contact() {
                   />
                 </div>
 
-                <div className="mt-4 text-sm text-gray-600 space-y-1">
-                  <div className="flex items-center space-x-2">
-                    <span>Parkování dostupné přímo u budovy</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <span>Zastávka MHD: Náměstí (2 min. chůze)</span>
-                  </div>
-                </div>
               </div>
             </div>
 
